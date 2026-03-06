@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function FloorPlanShowcase() {
@@ -62,13 +61,12 @@ export default function FloorPlanShowcase() {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden border-2 border-slate-100 shadow-2xl shadow-slate-200">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="https://images.squarespace-cdn.com/content/v1/5ee68194561fcb33d73d2f4b/96a6be59-770e-41d3-817e-7f99a3de8026/1-1011+North+14th+St+floorplan.jpg"
                 alt="ANSI-certified floor plan sample by Square Up Measuring"
-                width={800}
-                height={600}
                 className="w-full h-auto object-contain"
-                priority
+                loading="eager"
               />
             </div>
             {/* Badge */}
